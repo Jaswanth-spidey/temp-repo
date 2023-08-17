@@ -3,15 +3,12 @@ import { View, Text, StyleSheet, FlatList, Button } from "react-native";
 import { Context } from "../context/BlogContext";
 import { EvilIcons, Feather } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
-// import { createAppContainer } from 'react-navigation';
-// import { createStackNavigator } from 'react-navigation-stack';
 
 const IndexScreen = ({ navigation }) => {
-  const { state, addBlogPost, deleteBlogPost } = useContext(Context);
+  const { state, deleteBlogPost } = useContext(Context);
 
   return (
     <View>
-      <Button title="Add Post" onPress={addBlogPost} />
       <FlatList
         data={state}
         keyExtractor={(blogPosts) => blogPosts.title}
