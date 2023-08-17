@@ -25,7 +25,7 @@ const CreateScreen = ({ navigation }) => {
         title="Add Blogpost"
         onPress={() => {
           addBlogPost(title, content, () => {
-            navigation.navigate("IndexScreen");
+            navigation.navigate("Index");
           });
         }
       }
