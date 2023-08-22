@@ -5,7 +5,6 @@ import { EvilIcons } from '@expo/vector-icons';
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const ShowScreen = ({ navigation }) => {
-  console.log(navigation.getParam("id"));
   const { state } = useContext(Context);
 
   const blogPost = state.find(
@@ -23,7 +22,7 @@ const ShowScreen = ({ navigation }) => {
 ShowScreen.navigationOptions = ({ navigation }) => {
   return {
     headerRight: () => (
-      <TouchableOpacity onPress={() => navigation.navigate('Edit', { id: navigation.getParam("id")})}>
+      <TouchableOpacity onPress={() => navigation.navigate('Edit', { id: navigation.getParam("id") })}>
         <EvilIcons name="pencil" size={35} />
       </TouchableOpacity>
     ),
